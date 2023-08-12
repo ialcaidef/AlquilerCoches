@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiRest.Auxiliar;
+using ApiRest.Settings;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -73,7 +74,7 @@ namespace ApiRest.Controllers
                     else if (dias > 30)
                         result = ((coche.Precio * 50) / 100) * dias; 
                     break;
-                case Enumerados.TipoCarroceria.Pequeño:
+                case Enumerados.TipoCarroceria.Little:
                     if (dias <= 7)
                         result = coche.Precio * dias;
                     else 
@@ -118,13 +119,13 @@ namespace ApiRest.Controllers
             switch (coche.TipoCoche)
             {
                 case Enumerados.TipoCarroceria.Premium:
-                    result = (coche.Precio + (0.20 * coche.Precio)) * dias;
+                    result = (coche.Precio + (Appsettings.PorcIncDiaExtraPremium/100 * coche.Precio)) * dias;
                     break;
                 case Enumerados.TipoCarroceria.SUV:
-                    result = (coche.Precio + (0.60 * Utilidades.PrecioDiaPorTipoCoche(Enumerados.TipoCarroceria.Pequeño))) * dias;
+                    result = (coche.Precio + (Appsettings.PorcIncDiaExtraSuv /100 * Utilidades.PrecioDiaPorTipoCoche(Enumerados.TipoCarroceria.Little))) * dias;
                     break;
-                case Enumerados.TipoCarroceria.Pequeño:
-                    result = (coche.Precio + (0.30 * coche.Precio)) * dias;
+                case Enumerados.TipoCarroceria.Little:
+                    result = (coche.Precio + (Appsettings.PorcIncDiaExtraLittle/100 * coche.Precio)) * dias;
                     break;
 
             }

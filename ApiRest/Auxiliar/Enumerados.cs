@@ -7,6 +7,6 @@ namespace ApiRest.Auxiliar
 {
     public class Enumerados
     {
-        public enum TipoCarroceria { Premium, SUV, Pequeño}
+        public enum TipoCarroceria { Premium, SUV, Little}
     }
 }

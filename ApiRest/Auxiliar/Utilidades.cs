@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiRest.Settings;
 
 namespace ApiRest.Auxiliar
 {
@@ -35,8 +36,8 @@ namespace ApiRest.Auxiliar
                     return Enumerados.TipoCarroceria.Premium;
                 case "SUV":
                     return Enumerados.TipoCarroceria.SUV;
-                case "PEQUEÑO":
-                    return Enumerados.TipoCarroceria.Pequeño;
+                case "LITTLE":
+                    return Enumerados.TipoCarroceria.Little;
                 default:
                     throw new Exception("No es un tipo de coche válido");
             }
@@ -49,13 +50,13 @@ namespace ApiRest.Auxiliar
             switch (tipoCoche)
             {
                 case Enumerados.TipoCarroceria.Premium:
-                    result = 300;
+                    result = Appsettings.PrecioDiaPremium;
                     break;
                 case Enumerados.TipoCarroceria.SUV:
-                    result = 150;
+                    result = Appsettings.PrecioDiaSuv;
                     break;
-                case Enumerados.TipoCarroceria.Pequeño:
-                    result = 50;
+                case Enumerados.TipoCarroceria.Little:
+                    result = Appsettings.PrecioDiaLittle;
                     break;
 
             }

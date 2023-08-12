@@ -14,7 +14,7 @@ namespace ApiRest.Repositorio
             new Coche { Id = 1, TipoCoche = Enumerados.TipoCarroceria.Premium, Nombre = "BMW 7", FechaAlta = DateTime.Now, Matricula = "PRE-BMW07-001" },
             new Coche { Id = 2, TipoCoche = Enumerados.TipoCarroceria.SUV, Nombre = "Kia Sorento", FechaAlta = DateTime.Now, Matricula = "SUV-KIASOR-001" },
             new Coche { Id = 3, TipoCoche = Enumerados.TipoCarroceria.SUV, Nombre = "Nissan Juke", FechaAlta = DateTime.Now, Matricula = "SUV-NISJUK-001" },
-            new Coche { Id = 4, TipoCoche = Enumerados.TipoCarroceria.Pequeño, Nombre = "Seat Ibiza", FechaAlta = DateTime.Now, Matricula = "PEQ-SEATIBI-001" },
+            new Coche { Id = 4, TipoCoche = Enumerados.TipoCarroceria.Little, Nombre = "Seat Ibiza", FechaAlta = DateTime.Now, Matricula = "PEQ-SEATIBI-001" },
         };
 
 
