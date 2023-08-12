@@ -6,7 +6,7 @@ using System.IO;
 
 namespace ApiRest.Settings
 {
-    public class Appsettings
+    public class ApiSettings
     {
 
         private static string _LogFolder = string.Empty;
@@ -81,7 +81,7 @@ namespace ApiRest.Settings
         {
             IConfigurationBuilder builder = new ConfigurationBuilder()
               .SetBasePath(Directory.GetCurrentDirectory())
-              .AddJsonFile("./Settings/appsettings.json", optional: false, reloadOnChange: true);
+              .AddJsonFile("./Settings/ApiSettings.json", optional: false, reloadOnChange: true);
             IConfiguration configuration = builder.Build();
             configuration = builder.Build();
             

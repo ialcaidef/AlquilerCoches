@@ -50,13 +50,13 @@ namespace ApiRest.Auxiliar
             switch (tipoCoche)
             {
                 case Enumerados.TipoCarroceria.Premium:
-                    result = Appsettings.PrecioDiaPremium;
+                    result = ApiSettings.PrecioDiaPremium;
                     break;
                 case Enumerados.TipoCarroceria.SUV:
-                    result = Appsettings.PrecioDiaSuv;
+                    result = ApiSettings.PrecioDiaSuv;
                     break;
                 case Enumerados.TipoCarroceria.Little:
-                    result = Appsettings.PrecioDiaLittle;
+                    result = ApiSettings.PrecioDiaLittle;
                     break;
 
             }

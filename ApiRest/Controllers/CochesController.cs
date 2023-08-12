@@ -119,13 +119,13 @@ namespace ApiRest.Controllers
             switch (coche.TipoCoche)
             {
                 case Enumerados.TipoCarroceria.Premium:
-                    result = (coche.Precio + (Appsettings.PorcIncDiaExtraPremium/100 * coche.Precio)) * dias;
+                    result = (coche.Precio + (ApiSettings.PorcIncDiaExtraPremium/100 * coche.Precio)) * dias;
                     break;
                 case Enumerados.TipoCarroceria.SUV:
-                    result = (coche.Precio + (Appsettings.PorcIncDiaExtraSuv /100 * Utilidades.PrecioDiaPorTipoCoche(Enumerados.TipoCarroceria.Little))) * dias;
+                    result = (coche.Precio + (ApiSettings.PorcIncDiaExtraSuv /100 * Utilidades.PrecioDiaPorTipoCoche(Enumerados.TipoCarroceria.Little))) * dias;
                     break;
                 case Enumerados.TipoCarroceria.Little:
-                    result = (coche.Precio + (Appsettings.PorcIncDiaExtraLittle/100 * coche.Precio)) * dias;
+                    result = (coche.Precio + (ApiSettings.PorcIncDiaExtraLittle/100 * coche.Precio)) * dias;
                     break;
 
             }

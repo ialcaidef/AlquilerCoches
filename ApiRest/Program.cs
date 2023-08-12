@@ -15,9 +15,9 @@ namespace ApiRest
     {
         public static void Main(string[] args)
         {
-            Appsettings.ConfigureApp();
+            ApiSettings.ConfigureApp();
 
-            Logger.CreateLogger(Appsettings.LogFolder, Appsettings.AppName);
+            Logger.CreateLogger(ApiSettings.LogFolder, ApiSettings.AppName);
 
             Log.Information("ApiHost arrancada");
 
